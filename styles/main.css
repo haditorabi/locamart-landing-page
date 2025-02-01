@@ -1,3 +1,24 @@
 :root {
     --navbar-height: 80px;
+    --bullet-item-color: black; 
+
 }
+
+.bullet-item {
+    position: relative;
+    padding-left: 20px; 
+  }
+  
+.bullet-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--bullet-item-color);
+    border-radius: 50%;
+}
+
+  
