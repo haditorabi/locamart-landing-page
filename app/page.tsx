@@ -1,12 +1,10 @@
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
 import { Image } from "@heroui/image";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import { WatingList } from "@/components/watinglist";
+import { Button } from "@heroui/button";
+import { FaRegEnvelope } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -367,7 +365,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className=" text-center pt-[80px] pb-[10px] px-6 w-screen border-black border">
+      <section className=" text-center pt-[80px] pb-[10px] px-6 w-screen ">
         <div
           style={{ "--bullet-item-color": "#E153B7" } as React.CSSProperties}
           className="bullet-item font-bold text-[1.5rem] text-center inline"
@@ -405,7 +403,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className=" text-center pt-[55px] pb-[10px] px-6 w-screen border-black border">
+      <section className=" text-center pt-[55px] pb-[10px] px-6 w-screen">
         <div
           style={{ "--bullet-item-color": "#E153B7" } as React.CSSProperties}
           className="bullet-item font-bold text-[1.5rem] text-center inline"
@@ -416,8 +414,28 @@ export default function Home() {
         <div className={"text-[1.5rem] font-bold mt-12"}>
           Be the First to Experience Locamart!{" "}
         </div>
-        <div className="w-[463px] mx-auto">
+        <div className="w-[463px] mx-auto mt-6">
           <WatingList width="w-full" />
+        </div>
+        <div className="w-[447px] py-8 bg-[#F9FAFB] mt-12 rounded-lg mx-auto text-center flex flex-col items-center">
+          <span className="font-semibold text-2xl">
+            Interested in Partnering with Us?
+          </span>
+          <Link
+            isExternal
+            aria-label="Calendly"
+            href={siteConfig.links.calcom}
+            className="mt-8"
+          >
+            <Button color="primary" radius="sm" size="lg" className="px-7">
+              Book Appoinment
+            </Button>
+          </Link>
+          <span className="mt-6 font-semibold text-xl">or</span>
+          <span className="font-semibold text-xl">
+            Email Us: <FaRegEnvelope className="inline text-primary mx-1" />{" "}
+            info [at] locamart.co
+          </span>
         </div>
       </section>
     </>

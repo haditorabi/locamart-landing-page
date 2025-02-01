@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Locamart",
-  description: "Locamart is a modern, community-driven platform that helps users discover and support local businesses while providing business owners with tools to grow and engage with their customers.",
+  description:
+    "Locamart is a modern, community-driven platform that helps users discover and support local businesses while providing business owners with tools to grow and engage with their customers.",
   navItems: [
     {
       label: "How It Works",
@@ -64,11 +65,14 @@ export const siteConfig = {
     // },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/test",
+    twitter: "https://twitter.com/test",
+    docs: "https://test.com",
+    discord: "https://discord.gg/test",
+    sponsor: "https://patreon.com/test",
     calcom: "https://cal.com/test",
+    linkedin: "https://cal.com/test",
+    facebook: "https://cal.com/test",
+    instagram: "https://cal.com/test",
   },
 };

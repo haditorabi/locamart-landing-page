@@ -2,7 +2,10 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
-
+import { BsTwitterX } from "react-icons/bs";
+import { FiFacebook } from "react-icons/fi";
+import { FiInstagram } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -47,6 +50,36 @@ export default function RootLayout({
             <Navbar />
             <main className="container max-w-full flex-grow">{children}</main>
             <footer className="w-full flex flex-col items-center justify-center pt-3">
+              <div className="flex w-[350px] justify-center py-10">
+                <Link
+                  isExternal
+                  aria-label="Calendly"
+                  href={siteConfig.links.linkedin}
+                >
+                  <FiLinkedin className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                </Link>
+                <Link
+                  isExternal
+                  aria-label="Calendly"
+                  href={siteConfig.links.twitter}
+                >
+                  <BsTwitterX className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                </Link>
+                <Link
+                  isExternal
+                  aria-label="Calendly"
+                  href={siteConfig.links.facebook}
+                >
+                  <FiFacebook className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                </Link>
+                <Link
+                  isExternal
+                  aria-label="Calendly"
+                  href={siteConfig.links.instagram}
+                >
+                  <FiInstagram className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                </Link>
+              </div>
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
