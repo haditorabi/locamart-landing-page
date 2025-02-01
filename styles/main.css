@@ -1,7 +1,8 @@
 :root {
     --navbar-height: 80px;
     --bullet-item-color: black; 
-
+    --box-pane-color: #5370E1;
+    ; 
 }
 
 .bullet-item {
@@ -19,6 +20,24 @@
     height: 8px;
     background-color: var(--bullet-item-color);
     border-radius: 50%;
+}
+
+  
+.box-pane {
+    position: relative;
+  }
+  
+.box-pane::before {
+    content: '';
+    position: absolute;
+    left: -8;
+    top: 32px;
+    /* transform: translateY(-50%); */
+    width: 8px;
+    height: 82px;
+    background-color: var(--box-pane-color);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
   

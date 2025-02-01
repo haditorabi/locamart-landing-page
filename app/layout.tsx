@@ -46,7 +46,7 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container max-w-full flex-grow">{children}</main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="w-full flex flex-col items-center justify-center pt-3">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
@@ -58,6 +58,7 @@ export default function RootLayout({
                   reserved.  
                 </span>
               </Link>
+              <div className="bg-primary h-6 w-screen mt-3"></div>
             </footer>
           </div>
         </Providers>

@@ -1,9 +1,13 @@
 "use client";
 import { Form, Input, Button } from "@heroui/react";
-export function WatingList() {
+interface WatingListProps {
+  width: string;
+}
+
+export function WatingList({ width }: WatingListProps) {
   return (
     <Form
-      className="w-4/5 flex flex-row mt-3.5"
+      className={`${width} flex flex-row mt-3.5`}
       validationBehavior="native"
       // onSubmit={onSubmit}
     >

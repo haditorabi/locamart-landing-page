@@ -53,12 +53,11 @@ export default function Home() {
           <div className={"text-[1.5rem] font-bold mt-8"}>
             Be the First to Experience Locamart!{" "}
           </div>
-          <WatingList />
+          <WatingList width="w-4/5" />
         </div>
         <div className="flex-1 text-center justify-center mb-40">
           <Image alt="hero Image" src="assets/images/hero.png" />
         </div>
-        <div className="flex gap-3"></div>
       </section>
       {/* How It Works */}
       <section className="bg-[#F9FAFB] text-center pt-[74px] pb-[60px] px-6 w-screen">
@@ -116,7 +115,7 @@ export default function Home() {
         </div>
       </section>
       {/* Why Locamart */}
-      <section className="text-center pt-[74px] pb-[60px] px-6 w-screen border-black border">
+      <section className="text-center pt-[74px] pb-[60px] px-6 w-scree">
         <div
           style={{ "--bullet-item-color": "#E1C453" } as React.CSSProperties}
           className="bullet-item font-bold text-[1.5rem] text-center inline"
@@ -177,65 +176,249 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Business Benefits */}
-      <section className="text-center py-16 px-6">
-        <h2 className="text-3xl font-bold">For Businesses</h2>
-        <div className="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            Expand Your Reach
+      <section className="bg-[#F9FAFB] text-center pt-[74px] pb-[60px] px-6 w-screen">
+        <div
+          style={{ "--bullet-item-color": "#5370E1" } as React.CSSProperties}
+          className="bullet-item font-bold text-[1.5rem] text-center inline"
+        >
+          For Businesses
+        </div>
+        <div className="font-bold text-[2rem] pt-[18px] pb-3">
+          How <span className="text-[#5370E1]">Locamart</span> Will Help Boost
+          Your Business
+        </div>
+        <div className="flex flex-wrap mt-5 mx-auto  max-w-[76rem] justify-center">
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#B6C5FF] border bg-[#E9EBFB] h-[262px]">
+              <Image alt="Expand Your Reach" src="assets/images/fb1.png" />
+              <div className="text-2xl font-semibold mt-3">
+                Expand Your Reach
+              </div>
+              <div className="text-base mt-3">
+                Gain visibility and connect with customers who are actively
+                looking for culturally-aligned products and services.{" "}
+              </div>
+            </div>
           </div>
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            Attract Loyal Customers
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#B6C5FF] border bg-[#E9EBFB] h-[262px]">
+              <Image
+                alt="Attract Loyal Customers"
+                src="assets/images/fb2.png"
+              />
+              <div className="text-2xl font-semibold mt-3">
+                Attract Loyal Customers
+              </div>
+              <div className="text-base mt-3">
+                Build trust and earn customer loyalty through transparent
+                reviews, ratings, and promotions.{" "}
+              </div>
+            </div>
           </div>
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            Grow Your Sales
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#B6C5FF] border bg-[#E9EBFB] h-[262px]">
+              <Image
+                alt="Stand Out in a Competitive Market"
+                src="assets/images/fb3.png"
+              />
+              <div className="text-2xl font-semibold mt-3">Grow Your Sales</div>
+              <div className="text-base mt-3">
+                Boost your sales by offering your products and services to a
+                wider, more engaged audience.{" "}
+              </div>
+            </div>
+          </div>
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#B6C5FF] border bg-[#E9EBFB] h-[292px] mt-3">
+              <Image
+                alt="Drive More Traffic with Location-Based Discovery"
+                src="assets/images/fb4.png"
+              />
+              <div className="text-2xl font-semibold mt-3">
+                Stand Out in a Competitive Market
+              </div>
+              <div className="text-base mt-3">
+                Differentiate your business with a strong presence on a platform
+                dedicated to local, immigrant-owned businesses.{" "}
+              </div>
+            </div>
+          </div>
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#B6C5FF] border bg-[#E9EBFB] h-[292px] mt-3">
+              <Image
+                alt="Engage with a Supportive Community"
+                src="assets/images/fb5.png"
+              />
+              <div className="text-2xl font-semibold mt-3">
+                Drive More Traffic with Location-Based Discovery
+              </div>
+              <div className="text-base mt-3">
+                Make it easier for local customers to find you with
+                location-based matching, bringing in foot traffic and online
+                visits.{" "}
+              </div>
+            </div>
+          </div>
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#B6C5FF] border bg-[#E9EBFB] h-[292px] mt-3">
+              <Image alt="User-Friendly" src="assets/images/fb6.png" />
+              <div className="text-2xl font-semibold mt-3">
+                Engage with a Supportive Community
+              </div>
+              <div className="text-base mt-3">
+                Connect with a community of businesses and customers who share
+                your values and help your business grow.{" "}
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       {/* User Benefits */}
-      <section className="bg-green-100 text-center py-16 px-6">
-        <h2 className="text-3xl font-bold">For Users</h2>
-        <div className="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            Discover Local Services
+      <section className="bg-[#F9FAFB] text-center pt-[4px] pb-[60px] px-6 w-screen">
+        <div
+          style={{ "--bullet-item-color": "#53E17D" } as React.CSSProperties}
+          className="bullet-item font-bold text-[1.5rem] text-center inline"
+        >
+          For Users
+        </div>
+        <div className="font-bold text-[2rem] pt-[18px] pb-3">
+          How <span className="text-[#53E17D]">Locamart</span> Helps You Find
+          What You Need
+        </div>
+        <div
+          className="flex flex-wrap mt-5 mx-auto  max-w-[76rem] justify-center"
+          style={{ "--box-pane-color": "#53E17D" } as React.CSSProperties}
+        >
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#53E17D] border bg-[#DEFFE5] h-[243px]">
+              <Image
+                alt="Discover Local Services"
+                src="assets/images/fu1.png"
+              />
+              <div className="text-2xl font-semibold mt-3">
+                Discover Local Services
+              </div>
+              <div className="text-base mt-3">
+                Quickly find businesses and services tailored to your needs.{" "}
+              </div>
+            </div>
           </div>
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            Read and Write Reviews
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#53E17D] border bg-[#DEFFE5] h-[243px]">
+              <Image alt="Read and Write Reviews" src="assets/images/fu2.png" />
+              <div className="text-2xl font-semibold mt-3">
+                Read and Write Reviews
+              </div>
+              <div className="text-base mt-3">
+                Share your experiences and explore trusted recommendations.{" "}
+              </div>
+            </div>
           </div>
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            Save Your Favorites
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#53E17D] border bg-[#DEFFE5] h-[243px]">
+              <Image alt="Save Your Favorites" src="assets/images/fu3.png" />
+              <div className="text-2xl font-semibold mt-3">
+                Save Your Favorites
+              </div>
+              <div className="text-base mt-3">
+                Keep track of the businesses you love for easy access later.{" "}
+              </div>
+            </div>
+          </div>
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#53E17D] border bg-[#DEFFE5] h-[243px] mt-3">
+              <Image
+                alt="Personalized Suggestions"
+                src="assets/images/fu4.png"
+              />
+              <div className="text-2xl font-semibold mt-3">
+                Personalized Suggestions
+              </div>
+              <div className="text-base mt-3">
+                Get recommendations based on your preferences and location.{" "}
+              </div>
+            </div>
+          </div>
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#53E17D] border bg-[#DEFFE5] h-[243px] mt-3">
+              <Image alt="Exclusive Deals" src="assets/images/fu5.png" />
+              <div className="text-2xl font-semibold mt-3">Exclusive Deals</div>
+              <div className="text-base mt-3">
+                Enjoy special offers and discounts from local businesses.{" "}
+              </div>
+            </div>
+          </div>
+          <div className=" basis-1/3 px-3 pb-4">
+            <div className="box-pane p-8 rounded-2xl text-left border-[#53E17D] border bg-[#DEFFE5] h-[243px] mt-3">
+              <Image
+                alt="Simple and Smart Search"
+                src="assets/images/fu6.png"
+              />
+              <div className="text-2xl font-semibold mt-3">
+                Simple and Smart Search
+              </div>
+              <div className="text-base mt-3">
+                Use advanced filters to find exactly what you're looking for.{" "}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="text-center py-16 px-6">
-        <h2 className="text-3xl font-bold">The Story Behind Locamart</h2>
-        <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-          <span className="text-[#E1C453]">Locamart</span> was created to
-          connect businesses with their communities, making it easier for people
-          to support local enterprises.
-        </p>
+      <section className=" text-center pt-[80px] pb-[10px] px-6 w-screen border-black border">
+        <div
+          style={{ "--bullet-item-color": "#E153B7" } as React.CSSProperties}
+          className="bullet-item font-bold text-[1.5rem] text-center inline"
+        >
+          About
+        </div>
+        <div className="font-bold text-[2rem] pt-[18px] pb-3">
+          The Story Behind <span className="text-[#E153B7]">Locamart</span>
+        </div>
+
+        <div className="flex justify-center mx-auto">
+          <div className="flex-1 text-start justify-center col mx-16 mt-16 max-w-[413px] ">
+            <div className={subtitle({ class: "mt-6 leading-[1.25]" })}>
+              Working closely with businesses and startups, we realized how
+              challenging it is for small businesses to compete with larger
+              brands.
+              <br />
+              <br />
+              This inspired us to create Locamart—a platform designed to help
+              businesses connect with their communities and grow.
+              <br />
+              <br />
+              Our team currently consists of product designers and web
+              developers committed to building a fair and supportive
+              marketplace.{" "}
+            </div>
+          </div>
+          <div className="flex-1 text-center justify-center mt-10 max-w-[383px]">
+            <Image
+              alt="The Story Behind Locamart"
+              src="assets/images/story.png"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gray-200 text-center py-16 px-6">
-        <h2 className="text-3xl font-bold">Get in Touch</h2>
-        <div className="mt-6">
-          <input
-            type="email"
-            placeholder="Your email address"
-            className="p-3 border rounded-md w-64"
-          />
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-md ml-2">
-            Join Waiting List
-          </button>
+      <section className=" text-center pt-[55px] pb-[10px] px-6 w-screen border-black border">
+        <div
+          style={{ "--bullet-item-color": "#E153B7" } as React.CSSProperties}
+          className="bullet-item font-bold text-[1.5rem] text-center inline"
+        >
+          Contact
         </div>
-        <p className="mt-4">
-          Email us at <span className="text-blue-600">info@locamart.co</span>
-        </p>
+        <div className="font-bold text-[2rem] pt-[18px] pb-3">Get in Touch</div>{" "}
+        <div className={"text-[1.5rem] font-bold mt-12"}>
+          Be the First to Experience Locamart!{" "}
+        </div>
+        <div className="w-[463px] mx-auto">
+          <WatingList width="w-full" />
+        </div>
       </section>
     </>
   );
