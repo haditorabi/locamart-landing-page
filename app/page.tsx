@@ -357,7 +357,7 @@ export default function Home() {
                 Simple and Smart Search
               </div>
               <div className="text-base mt-3">
-                Use advanced filters to find exactly what you're looking for.{" "}
+                Use advanced filters to find exactly what you are looking for.{" "}
               </div>
             </div>
           </div>

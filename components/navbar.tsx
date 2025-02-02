@@ -49,7 +49,12 @@ export const Navbar = () => {
   // );
 
   return (
-    <HeroUINavbar maxWidth="xl" height="4.6rem" isBordered={true}  position="sticky">
+    <HeroUINavbar
+      maxWidth="xl"
+      height="4.6rem"
+      isBordered={true}
+      position="sticky"
+    >
       <NavbarBrand as="li" className="gap-3 max-w-fit px-4">
         <NextLink className="flex justify-start items-center gap-1" href="/">
           <LogoX />
@@ -59,11 +64,11 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <ul className="hidden lg:flex gap-8 ml-2 justify-center">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href} >
+            <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}
@@ -74,9 +79,14 @@ export const Navbar = () => {
           ))}
         </ul>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full pl-4" justify="end">
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full pl-4"
+        justify="end"
+      >
         <Link isExternal aria-label="Calendly" href={siteConfig.links.calcom}>
-        <Button color="primary" radius="sm" size="md" className="px-9">Let’s Talk</Button>
+          <Button color="primary" radius="sm" size="md" className="px-9">
+            Let’s Talk
+          </Button>
         </Link>
       </NavbarContent>
       {/* <NavbarContent
