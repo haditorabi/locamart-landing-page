@@ -40,4 +40,9 @@
     border-bottom-left-radius: 8px;
 }
 
-  
+.waiting-list-border .border-default-200 {
+  border-color: black !important;
+}
+.waiting-list-border .border-medium {
+  border-width: 1px !important;
+}

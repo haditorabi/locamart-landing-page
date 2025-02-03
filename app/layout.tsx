@@ -48,41 +48,41 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container max-w-full flex-grow">{children}</main>
-            <footer className="w-full flex flex-col items-center justify-center pt-3">
-              <div className="flex w-[350px] justify-center py-10">
+            <main className="container flex-grow max-w-full">{children}</main>
+            <footer className="flex flex-col items-center justify-center w-full pt-3">
+              <div className="flex justify-center w-full py-8 md:py-10">
                 <Link
                   isExternal
                   aria-label="Calendly"
                   href={siteConfig.links.linkedin}
                 >
-                  <FiLinkedin className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                  <FiLinkedin className="bg-black md:w-10 md:h-10 w-8 h-8 mx-2 md:mx-4 text-white rounded-[50%] px-[7px]" />
                 </Link>
                 <Link
                   isExternal
                   aria-label="Calendly"
                   href={siteConfig.links.twitter}
                 >
-                  <BsTwitterX className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                  <BsTwitterX className="bg-black md:w-10 md:h-10 w-8 h-8 mx-2 md:mx-4 text-white rounded-[50%] px-[7px]" />
                 </Link>
                 <Link
                   isExternal
                   aria-label="Calendly"
                   href={siteConfig.links.facebook}
                 >
-                  <FiFacebook className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                  <FiFacebook className="bg-black md:w-10 md:h-10 w-8 h-8 mx-2 md:mx-4 text-white rounded-[50%] px-[7px]" />
                 </Link>
                 <Link
                   isExternal
                   aria-label="Calendly"
                   href={siteConfig.links.instagram}
                 >
-                  <FiInstagram className="bg-black w-10 h-10 mx-4 text-white rounded-[50%] px-[7px]" />
+                  <FiInstagram className="bg-black md:w-10 md:h-10 w-8 h-8 mx-2 md:mx-4 text-white rounded-[50%] px-[7px]" />
                 </Link>
               </div>
               <Link
                 isExternal
-                className="flex items-center gap-1 text-current"
+                className="flex items-center gap-1 text-sm md:text-current"
                 href="/"
                 title="Locamart homepage"
               >
@@ -91,7 +91,7 @@ export default function RootLayout({
                   reserved.  
                 </span>
               </Link>
-              <div className="bg-primary h-6 w-screen mt-3"></div>
+              <div className="w-full mt-8 h-7 md:mt-3 bg-primary" />
             </footer>
           </div>
         </Providers>

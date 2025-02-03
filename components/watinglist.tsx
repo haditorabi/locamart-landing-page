@@ -7,28 +7,30 @@ interface WatingListProps {
 export function WatingList({ width }: WatingListProps) {
   return (
     <Form
-      className={`${width} flex flex-row mt-3.5`}
+      className={`${width} flex items-center md:flex-row mt-2 md:mt-3.5`}
       validationBehavior="native"
       // onSubmit={onSubmit}
     >
       <Input
         isRequired
+        className="w-full md:w-inhert md:basis-8/12 waiting-list-border max-w-[380px]"
+        color="primary"
         errorMessage="Please enter a valid email"
+        fullWidth={false}
         name="email"
         placeholder="You Email Address"
-        type="email"
-        fullWidth={false}
-        variant="bordered"
         radius="sm"
-        className="basis-8/12"
+        type="email"
+        variant="bordered"
       />
       <Button
-        type="submit"
+        className="text-white bg-black w-[58%] mt-4 md:mt-0 md:w-inhert md:basis-4/12 max-w-[180px]"
         fullWidth={false}
         radius="sm"
-        className="basis-4/12 bg-black text-white"
+        type="submit"
       >
-        Join waiting list
+        Join
+        <span className="md:hidden lg:inline">waiting list</span>
       </Button>
       {/* {submitted && (
               <div className="text-small text-default-500">
