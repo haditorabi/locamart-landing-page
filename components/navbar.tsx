@@ -13,7 +13,7 @@ import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
-import React from "react";
+import React, { useState } from "react";
 
 import { siteConfig } from "@/config/site";
 import { LogoX } from "@/components/icons";
@@ -52,18 +52,28 @@ export const Navbar = () => {
   //   "Log Out",
   // ];
 
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <HeroUINavbar
       height="4.6rem"
       isBordered={true}
+      isMenuOpen={isMenuOpen}
       maxWidth="xl"
       position="sticky"
+      onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarBrand as="li" className="gap-3 md:px-4 max-w-fit">
         <NextLink className="flex items-center justify-start gap-1" href="/">
-          <LogoX />
+          <LogoX height={35} width={180} />
         </NextLink>
       </NavbarBrand>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
@@ -97,14 +107,20 @@ export const Navbar = () => {
       <NavbarContent className="sm:hidden" justify="end">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          icon={false}
+          onClick={handleMenuToggle}
         />
       </NavbarContent>
 
       <NavbarMenu>
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`} className="py-3">
-            <Link className="w-full" color={"foreground"} href="#" size="lg">
+            <Link
+              className="w-full"
+              color={"foreground"}
+              href={item.href}
+              size="lg"
+              onClick={handleMenuItemClick}
+            >
               {item.label}
             </Link>
           </NavbarMenuItem>
@@ -119,6 +135,7 @@ export const Navbar = () => {
             aria-label="Calendly"
             className="w-full"
             href={siteConfig.links.calcom}
+            onClick={handleMenuItemClick}
           >
             <Button
               className="px-9"

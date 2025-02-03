@@ -66,13 +66,16 @@ export default function Home() {
         <div className="flex justify-center flex-1 mt-16 text-center md:mt-0">
           <Image
             alt="hero Image"
-            src="assets/images/hero.png"
             className="mx-auto"
+            src="assets/images/hero.png"
           />
         </div>
       </section>
       {/* How It Works */}
-      <section className="bg-[#F9FAFB] text-center pt-[115px] md:pt-[74px] pb-[60px] px-6 w-full">
+      <section
+        className="bg-[#F9FAFB] text-center pt-[115px] md:pt-[74px] pb-[60px] px-6 w-full"
+        id="how-it-works"
+      >
         <div
           className="bullet-item font-bold text-xl md:text-[1.5rem] text-center inline"
           style={{ "--bullet-item-color": "#5370E1" } as React.CSSProperties}
@@ -127,7 +130,10 @@ export default function Home() {
         </div>
       </section>
       {/* Why Locamart */}
-      <section className=" pt-[80px] md:pt-[74px] pb-[60px] px-4 md:px-6 w-full text-center">
+      <section
+        className=" pt-[80px] md:pt-[74px] pb-[60px] px-4 md:px-6 w-full text-center"
+        id="why-locamart"
+      >
         <div
           className="bullet-item font-bold text-xl md:text-[1.5rem] text-center inline"
           style={{ "--bullet-item-color": "#E1C453" } as React.CSSProperties}
@@ -193,7 +199,10 @@ export default function Home() {
         </div>
       </section>
       {/* Business Benefits */}
-      <section className="bg-[#F9FAFB] text-center pt-[80px] md:pt-[74px] pb-[60px] px-4 md:px-6 w-full">
+      <section
+        className="bg-[#F9FAFB] text-center pt-[80px] md:pt-[74px] pb-[60px] px-4 md:px-6 w-full"
+        id="for-businesses"
+      >
         <div
           className="bullet-item font-bold text-xl md:text-[1.5rem] text-center inline"
           style={{ "--bullet-item-color": "#5370E1" } as React.CSSProperties}
@@ -305,7 +314,10 @@ export default function Home() {
         </div>
       </section>
       {/* User Benefits */}
-      <section className="bg-[#F9FAFB] text-center pt-[4px] pb-[60px] px-4 md:px-6 w-full">
+      <section
+        className="bg-[#F9FAFB] text-center pt-[4px] pb-[60px] px-4 md:px-6 w-full"
+        id="for-users"
+      >
         <div
           className="bullet-item font-bold text-xl md:text-[1.5rem] text-center inline"
           style={{ "--bullet-item-color": "#53E17D" } as React.CSSProperties}
@@ -414,7 +426,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className=" text-center pt-[80px] pb-[10px] px-6 w-full ">
+      <section
+        className=" text-center pt-[80px] pb-[10px] px-6 w-full "
+        id="about"
+      >
         <div
           className="bullet-item font-bold text-xl md:text-[1.5rem] text-center inline"
           style={{ "--bullet-item-color": "#E153B7" } as React.CSSProperties}
@@ -452,7 +467,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className=" text-center mt-20 md:pt-[55px] pb-[10px] px-6 w-full">
+      <section
+        className=" text-center mt-20 md:pt-[55px] pb-[10px] px-6 w-full"
+        id="contact"
+      >
         <div
           className="bullet-item font-bold text-xl md:text-[1.5rem] text-center inline"
           style={{ "--bullet-item-color": "#5370E1" } as React.CSSProperties}

@@ -4,7 +4,9 @@
     --box-pane-color: #5370E1;
     ; 
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .bullet-item {
     position: relative;
     padding-left: 20px; 

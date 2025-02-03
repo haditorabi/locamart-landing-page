@@ -66,13 +66,14 @@ export const siteConfig = {
   ],
   links: {
     github: "https://github.com/test",
-    twitter: "https://twitter.com/test",
     docs: "https://test.com",
     discord: "https://discord.gg/test",
     sponsor: "https://patreon.com/test",
-    calcom: "https://cal.com/test",
-    linkedin: "https://cal.com/test",
+    //////
+    twitter: "https://x.com/Locamart_Inc",
+    calcom: "https://cal.com/locamart/marketing-meeting",
+    linkedin: "https://www.linkedin.com/company/locamartinc",
     facebook: "https://cal.com/test",
-    instagram: "https://cal.com/test",
+    instagram: "https://www.instagram.com/locamart_inc/",
   },
 };
