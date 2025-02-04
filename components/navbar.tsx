@@ -98,7 +98,13 @@ export const Navbar = () => {
         className="hidden pl-4 sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <Link isExternal aria-label="Calendly" href={siteConfig.links.calcom}>
+        <Link
+          isExternal
+          aria-label="Calendly"
+          href={siteConfig.links.calcom}
+          style={{ textDecoration: "none" }}
+          target="_blank"
+        >
           <Button className="px-9" color="primary" radius="sm" size="md">
             Let’s Talk
           </Button>
@@ -135,7 +141,9 @@ export const Navbar = () => {
             aria-label="Calendly"
             className="w-full"
             href={siteConfig.links.calcom}
-            onClick={handleMenuItemClick}
+            // onClick={handleMenuItemClick}
+            style={{ textDecoration: "none" }}
+            target="_blank"
           >
             <Button
               className="px-9"

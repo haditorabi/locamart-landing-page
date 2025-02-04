@@ -499,6 +499,8 @@ export default function Home() {
             aria-label="Calendly"
             className="mt-3 md:mt-8"
             href={siteConfig.links.calcom}
+            style={{ textDecoration: "none" }}
+            target="_blank"
           >
             <Button className="px-7" color="primary" radius="sm" size="lg">
               Book Appoinment
