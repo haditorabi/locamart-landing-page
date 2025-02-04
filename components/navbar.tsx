@@ -68,8 +68,11 @@ export const Navbar = () => {
       isBordered={true}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
-      position="sticky"
+      position="static"
       onMenuOpenChange={setIsMenuOpen}
+      style={{ position: "fixed" }}
+      // disableScrollHandler={false}
+      // shouldHideOnScroll={true}
     >
       <NavbarBrand as="li" className="gap-3 md:px-4 max-w-fit">
         <NextLink className="flex items-center justify-start gap-1" href="/">
@@ -136,25 +139,23 @@ export const Navbar = () => {
             Interested in <br />
             Partnering with Us?
           </div>
-          <Link
-            isExternal
-            aria-label="Calendly"
-            className="w-full"
-            href={siteConfig.links.calcom}
-            // onClick={handleMenuItemClick}
-            style={{ textDecoration: "none" }}
-            target="_blank"
+          <Button
+            className="text-center w-full"
+            color="primary"
+            fullWidth={true}
+            radius="sm"
+            size="lg"
+            onClick={() => {
+              window.open(
+                siteConfig.links.calcom,
+                "_blank",
+                "noopener,noreferrer"
+              );
+              handleMenuItemClick();
+            }}
           >
-            <Button
-              className="px-9"
-              color="primary"
-              fullWidth={true}
-              radius="sm"
-              size="lg"
-            >
-              Let’s Talk
-            </Button>
-          </Link>
+            Let’s Talk
+          </Button>
         </NavbarMenuItem>
       </NavbarMenu>
 

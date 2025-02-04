@@ -200,7 +200,7 @@ export default function Home() {
       </section>
       {/* Business Benefits */}
       <section
-        className="bg-[#F9FAFB] text-center pt-[80px] md:pt-[74px] pb-[60px] px-4 md:px-6 w-full"
+        className="bg-[#F9FAFB] text-center pt-[80px] md:pt-[74px] pb-[10px] px-4 md:px-6 w-full"
         id="for-businesses"
       >
         <div
@@ -315,7 +315,7 @@ export default function Home() {
       </section>
       {/* User Benefits */}
       <section
-        className="bg-[#F9FAFB] text-center pt-[4px] pb-[60px] px-4 md:px-6 w-full"
+        className="bg-[#F9FAFB] text-center pt-[74px] pb-[60px] px-4 md:px-6 w-full"
         id="for-users"
       >
         <div
@@ -494,18 +494,23 @@ export default function Home() {
           <span className="text-xl font-semibold md:text-2xl">
             Interested in <br className="md:hidden" /> Partnering with Us?
           </span>
-          <Link
-            isExternal
-            aria-label="Calendly"
-            className="mt-3 md:mt-8"
-            href={siteConfig.links.calcom}
-            style={{ textDecoration: "none" }}
-            target="_blank"
+          <Button
+            className="px-7 mt-3 md:mt-8"
+            color="primary"
+            radius="sm"
+            size="lg"
           >
-            <Button className="px-7" color="primary" radius="sm" size="lg">
+            <Link
+              isExternal
+              aria-label="Calendly"
+              className=" text-white"
+              href={siteConfig.links.calcom}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book Appoinment
-            </Button>
-          </Link>
+            </Link>
+          </Button>
           <span className="mt-2 text-lg font-semibold md:text-xl md:mt-6">
             or
           </span>

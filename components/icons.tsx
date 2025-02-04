@@ -3,14 +3,14 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 
 export const LogoX: React.FC<IconSvgProps> = ({
-  size = 180,
-  width,
-  height,
+  // size = 180,
+  width = 180,
+  height = 35,
   ...props
 }) => (
   <svg
-    height={size || height}
-    width={size || width}
+    height={height}
+    width={width}
     viewBox="0 0 180 35"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
