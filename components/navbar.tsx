@@ -71,8 +71,6 @@ export const Navbar = () => {
       position="static"
       onMenuOpenChange={setIsMenuOpen}
       style={{ position: "fixed" }}
-      // disableScrollHandler={false}
-      // shouldHideOnScroll={true}
     >
       <NavbarBrand as="li" className="gap-3 md:px-4 max-w-fit">
         <NextLink className="flex items-center justify-start gap-1" href="/">
