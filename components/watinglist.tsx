@@ -2,11 +2,11 @@
 import { useState } from "react";
 import { Form, Input, Button } from "@heroui/react";
 
-interface WatingListProps {
+interface WaitingListProps {
   width: string;
 }
 
-export function WatingList({ width }: WatingListProps) {
+export function WaitingList({ width }: WaitingListProps) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -36,28 +36,33 @@ export function WatingList({ width }: WatingListProps) {
     setLoading(true);
     setMessage("");
 
-    const res = await fetch("/api/waiting-list", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+    try {
+      const res = await fetch("/api/waiting-list", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    setLoading(false);
+      setLoading(false);
 
-    if (res.ok) {
-      setMessage("You have been added to the waiting list!");
-      setEmail("");
-    } else {
-      setMessage(data.error || "Something went wrong");
+      if (res.ok) {
+        setMessage("You have been added to the waiting list!");
+        setEmail("");
+      } else {
+        setMessage(data.error || "Something went wrong");
+      }
+    } catch (error) {
+      setLoading(false);
+      setMessage("Something went wrong");
     }
   };
 
   return (
     <>
       <Form
-        className={`${width} flex items-center md:items-start  md:flex-row mt-2 md:mt-3.5`}
+        className={`${width} flex items-center md:items-start md:flex-row mt-2 md:mt-3.5`}
         onSubmit={handleSubmit}
       >
         <Input
@@ -65,7 +70,6 @@ export function WatingList({ width }: WatingListProps) {
           className="w-full md:w-inherit md:basis-8/12 waiting-list-border max-w-[380px]"
           color="primary"
           errorMessage={emailError}
-          fullWidth={false}
           isInvalid={!!emailError}
           name="email"
           placeholder="Your Email Address"
@@ -78,7 +82,6 @@ export function WatingList({ width }: WatingListProps) {
         <Button
           className="text-white bg-black w-[58%] mt-4 md:mt-0 md:w-inherit md:basis-4/12 max-w-[180px]"
           disabled={loading}
-          fullWidth={false}
           radius="sm"
           type="submit"
         >
@@ -86,9 +89,7 @@ export function WatingList({ width }: WatingListProps) {
           <span className="md:hidden lg:inline">waiting list</span>
         </Button>
       </Form>
-      <div className="w-full">
-        {message && <p className="mt-2 text-sm">{message}</p>}
-      </div>
+      {message && <p className="w-full mt-2 text-sm">{message}</p>}
     </>
   );
 }
