@@ -5,7 +5,7 @@ import { FaRegEnvelope } from "react-icons/fa6";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { WatingList } from "@/components/watinglist";
+import { WaitingList } from "@/components/waitinglist";
 
 const SectionTitle = ({
   color,
@@ -129,7 +129,7 @@ const Home = () => {
           <div className="text-[1.5rem] font-bold mt-8 sm:text-center md:text-left">
             Be the First to Experience Locamart!
           </div>
-          <WatingList width="md:w-4/5" />
+          <WaitingList width="md:w-4/5" />
         </div>
         <div className="flex justify-center flex-1 mt-16 text-center md:mt-0">
           <Image
@@ -412,7 +412,7 @@ const Home = () => {
           Be the First to Experience Locamart!
         </div>
         <div className="md:w-[463px] mx-auto mt-4 md:mt-6">
-          <WatingList width="md:w-full" />
+          <WaitingList width="md:w-full" />
         </div>
         <div className="w-[256px] md:w-[447px] py-5 md:py-8 bg-[#F9FAFB] mt-12 rounded-lg mx-auto text-center flex flex-col items-center">
           <span className="text-xl font-semibold md:text-2xl">
