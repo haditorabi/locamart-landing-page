@@ -6,6 +6,9 @@ import { BsTwitterX } from "react-icons/bs";
 import { FiFacebook } from "react-icons/fi";
 import { FiInstagram } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -95,6 +98,8 @@ export default function RootLayout({
             </footer>
           </div>
         </Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
